@@ -63,7 +63,7 @@ export function Post({ post } : PostProps ) {
         setNewCommentText(event.target.value);
     }
     
-    function handleNewCommmentInvalid(event : InvalidEvent<HTMLTextAreaElement>){
+    function handleNewCommentInvalid(event : InvalidEvent<HTMLTextAreaElement>){
         event.target.setCustomValidity('This field is required!');
     }
 
@@ -110,7 +110,7 @@ export function Post({ post } : PostProps ) {
                     placeholder="Type your comment"
                     value={newCommentText}
                     onChange={handleNewCommentChange}
-                    onInvalid={handleNewCommmentInvalid}
+                    onInvalid={handleNewCommentInvalid}
                     required
                 />
 
